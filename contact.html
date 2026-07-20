@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prendre Rendez-vous & Contact | natural-net Bordeaux</title>
+  <meta name="description" content="Contactez notre agence web Natural-net à Bordeaux. Planifiez un rendez-vous pour échanger sur vos besoins en création de site, SEO, SEA ou GEO.">
+  <meta name="keywords" content="prendre rdv agence web bordeaux, contact natural-net, agence de communication contact, formulaire rdv seo bordeaux">
+  <link rel="canonical" href="https://natural-net.fr/contact.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://natural-net.fr/contact.html">
+  <meta property="og:title" content="Contact & RDV | natural-net">
+  <meta property="og:description" content="Planifiez un rendez-vous avec nos experts web et webmarketing à Bordeaux.">
+  <meta property="og:image" content="https://natural-net.fr/theme/fr/assets/images/logo-sur-fond-blanc.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://natural-net.fr/theme/fr/assets/images/2022/favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .contact-item-box {
+      background-color: var(--bg-darker);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 20px;
+    }
+    .contact-item-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+      color: var(--success);
+      font-family: var(--font-code);
+    }
+    .contact-item-box p {
+      font-size: 1rem;
+      color: var(--text-light);
+    }
+    
+    /* Interactive Appointment Form */
+    .booking-card {
+      background-color: var(--bg-darker);
+      border: 1px solid var(--border-color);
+      padding: 3.5rem;
+      border-radius: 24px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .form-group-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+    .form-group label {
+      font-family: var(--font-code);
+      font-size: 0.85rem;
+      color: var(--primary-soft);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background-color: rgba(18, 12, 36, 0.5);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: var(--transition-fast);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--success);
+      box-shadow: 0 0 10px rgba(24, 169, 87, 0.2);
+      background-color: rgba(18, 12, 36, 0.8);
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+    .checkbox-item input {
+      cursor: pointer;
+      accent-color: var(--success);
+      width: 18px;
+      height: 18px;
+    }
+    .checkbox-item span {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    
+    /* Success Message Block */
+    .success-block {
+      display: none;
+      text-align: center;
+      padding: 4rem 2rem;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: var(--transition-bounce);
+    }
+    .success-block.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background-color: rgba(24, 169, 87, 0.1);
+      border: 2px solid var(--success);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--success);
+      margin-bottom: 2rem;
+    }
+    
+    @media (max-width: 1024px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+    @media (max-width: 768px) {
+      .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+      .booking-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Asymmetric App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation (Desktop) -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-nn">
+          <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item"><a href="index.html">Accueil</a></li>
+          <li class="sidebar-item"><a href="projets.html">Projets</a></li>
+          <li class="sidebar-item"><a href="services.html">Services</a></li>
+          <li class="sidebar-item"><a href="agence.html">L'Agence</a></li>
+          <li class="sidebar-item active"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <a href="contact.html#rdv" class="nav-btn btn-magnetic">Prendre RDV</a>
+        <div class="sidebar-contact">
+          <span>05 56 17 75 19</span>
+          <a href="mailto:contact@natural-net.fr">contact@natural-net.fr</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Header (Hidden on Desktop) -->
+    <header class="mobile-header">
+      <a href="index.html" class="logo-nn">
+        <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+      </a>
+      <button class="hamburger" aria-label="Menu de navigation mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-menu-overlay">
+      <ul class="mobile-menu">
+        <li class="mobile-item"><a href="index.html">Accueil</a></li>
+        <li class="mobile-item"><a href="projets.html">Projets</a></li>
+        <li class="mobile-item"><a href="services.html">Services</a></li>
+        <li class="mobile-item"><a href="agence.html">L'Agence</a></li>
+        <li class="mobile-item active"><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html#rdv" class="nav-btn">Prendre RDV</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+      <div class="glow-bg"></div>
+      
+      <!-- PAGE HEADER -->
+      <section class="page-header reveal">
+        <div class="container">
+          <span style="font-family: var(--font-code); color: var(--success); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1rem;">// Échangeons sur votre projet</span>
+          <h1 class="split-words">Planifier un rendez-vous</h1>
+          <p class="subtitle">
+            Venez nous rencontrer à notre agence ou planifiez une visioconférence. Notre équipe est à votre disposition pour analyser vos besoins et concevoir votre stratégie digitale.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT & BOOKING FORM GRID -->
+      <section id="rdv" class="section reveal" style="padding-top: 1rem;">
+        <div class="container">
+          <div class="contact-grid">
+            
+            <!-- Left side: contact info & map placeholder -->
+            <div class="contact-info-block">
+              <div class="contact-item-box reveal-left">
+                <h3>// Notre Agence</h3>
+                <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">natural-net</p>
+                <p>14 rue Marceau, 33000 Bordeaux</p>
+                <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.95rem;">
+                  Notre agence dispose d'un espace d'accueil physique avec vitrine au cœur de Bordeaux. N'hésitez pas à nous rendre visite !
+                </p>
+              </div>
+
+              <div class="contact-item-box reveal-left" style="animation-delay: 0.2s;">
+                <h3>// Ligne Directe</h3>
+                <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Un conseiller vous répond :</p>
+                <p><a href="tel:0556177519" style="color: var(--text-light); text-decoration: underline; font-family: var(--font-code);">05 56 17 75 19</a></p>
+                <p style="margin-top: 0.3rem;"><a href="mailto:contact@natural-net.fr" style="color: var(--primary-soft); text-decoration: underline; font-family: var(--font-code);">contact@natural-net.fr</a></p>
+              </div>
+
+              <div class="contact-item-box reveal-left" style="animation-delay: 0.4s;">
+                <h3>// Horaires d'ouverture</h3>
+                <p>Du lundi au vendredi :</p>
+                <p style="font-weight: 600; margin-top: 0.5rem;">de 10h00 à 18h00</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Fermé le week-end et les jours fériés.</p>
+              </div>
+            </div>
+
+            <!-- Right side: Booking Form -->
+            <div class="booking-card reveal-right">
+              
+              <!-- Success Message Block (shown via JS after submission) -->
+              <div id="booking-success-message" class="success-block">
+                <div class="success-icon">✓</div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--text-light);">Demande reçue !</h2>
+                <p style="color: var(--text-muted); margin: 0 auto 2.5rem auto;">
+                  Merci pour votre demande de rendez-vous. Notre équipe étudie vos éléments et vous recontactera sous 24h ouvrées pour confirmer le créneau et échanger sur votre projet.
+                </p>
+                <a href="index.html" class="btn-primary">Retour à l'accueil</a>
+              </div>
+
+              <!-- Form Element -->
+              <form id="nn-booking-form" novalidate style="transition: opacity 0.5s ease;">
+                <h2 style="font-size: 2rem; margin-bottom: 2rem;">Planifier mon entretien</h2>
+                
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="name">Nom complet *</label>
+                    <input type="text" id="name" required placeholder="Jean Dupont">
+                  </div>
+                  <div class="form-group">
+                    <label for="company">Entreprise / Structure *</label>
+                    <input type="text" id="company" required placeholder="Ma Société SAS">
+                  </div>
+                </div>
+
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="email">E-mail professionnel *</label>
+                    <input type="email" id="email" required placeholder="contact@entreprise.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Téléphone *</label>
+                    <input type="tel" id="phone" required placeholder="06 12 34 56 78">
+                  </div>
+                </div>
+
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="project-type">Type de projet *</label>
+                    <select id="project-type" required>
+                      <option value="" disabled selected>Choisir une option</option>
+                      <option value="web">Création de site web</option>
+                      <option value="marketing">SEO / Référencement Naturel</option>
+                      <option value="sea">SEA / Publicité en ligne</option>
+                      <option value="geo">Optimisation IA / GEO</option>
+                      <option value="amo">Conseil & AMO</option>
+                      <option value="other">Autre besoin</option>
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="budget">Budget estimé *</label>
+                    <select id="budget" required>
+                      <option value="" disabled selected>Choisir une tranche</option>
+                      <option value="under1k">Moins de 1 000 &euro;</option>
+                      <option value="1to5k">De 1 000 &euro; à 5 000 &euro;</option>
+                      <option value="5to15k">De 5 000 &euro; à 15 000 &euro;</option>
+                      <option value="over15k">Plus de 15 000 &euro;</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group-row">
+                  <div class="form-group">
+                    <label for="desired-date">Date souhaitée *</label>
+                    <input type="date" id="desired-date" required>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Disponibilités préférées *</label>
+                    <div class="checkbox-group">
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="timeframe" value="matin" checked>
+                        <span>Matin</span>
+                      </label>
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="timeframe" value="midi">
+                        <span>Après-midi</span>
+                      </label>
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="timeframe" value="soir">
+                        <span>Soirée</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="message">Description de votre besoin *</label>
+                  <textarea id="message" required rows="5" placeholder="Parlez-nous en quelques lignes de vos objectifs, de l'état de votre site actuel et de ce que vous attendez de notre agence..."></textarea>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                  <button type="submit" class="btn-primary btn-magnetic" style="width: 100%; justify-content: center;">
+                    Envoyer ma demande de rendez-vous
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-info">
+              <a href="index.html" class="logo-nn">
+                <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+              </a>
+              <p style="margin-top: 1.5rem; font-size: 0.95rem;">
+                Notre agence web conçoit des architectures digitales et des stratégies webmarketing (SEO, SEA, GEO) à fort impact depuis 2007 au cœur de Bordeaux.
+              </p>
+              <div class="certification-logos" style="display: flex; gap: 1.5rem; align-items: center; margin-top: 2rem;">
+                <img src="https://natural-net.fr/theme/fr/assets/images/2025/logo-activateur-francenum-web.jpg" alt="Activateur France Num" style="height: 45px; border-radius: 6px;" loading="lazy">
+                <img src="https://natural-net.fr/theme/fr/assets/images/2026/logo-LQN-horizontal.svg" alt="Label Qualité Numérique" style="height: 35px;" loading="lazy">
+              </div>
+            </div>
+
+            <div class="footer-links">
+              <h4>Navigation</h4>
+              <ul class="footer-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="services.html">Services & Expertise</a></li>
+                <li><a href="agence.html">L'Agence</a></li>
+                <li><a href="contact.html">Contact & RDV</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Contact</h4>
+              <div class="footer-contact-details">
+                <div class="footer-contact-item">Adresse : <span>14 rue Marceau, 33000 Bordeaux</span></div>
+                <div class="footer-contact-item">Téléphone : <a href="tel:0556177519"><span>05 56 17 75 19</span></a></div>
+                <div class="footer-contact-item">Email : <a href="mailto:contact@natural-net.fr"><span>contact@natural-net.fr</span></a></div>
+                <div class="footer-contact-item">Horaires : <span>10h - 18h du lundi au vendredi</span></div>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="X">
+                  <svg width="18" height="18" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-bottom-links">
+              <a href="https://natural-net.fr/donnees-personnelles.htm&#108;">Données Personnelles</a>
+              <a href="https://natural-net.fr/mentions-legales.htm&#108;">Mentions Légales</a>
+              <a href="https://natural-net.fr/cgv.htm&#108;">CGV</a>
+            </div>
+            <div class="footer-copyright">
+              <span>&copy; 2026 natural-net. Tous droits réservés. Site garanti 100% sans cookies.</span>
+            </div>
+            <div class="footer-love">
+              Site redesigné avec attention ♥ par Tristan
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  
+  <script>
+    // Min date constraint for datepicker (today)
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateInput = document.getElementById('desired-date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+      }
+    });
+  </script>
+</body>
+</html>

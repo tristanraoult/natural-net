@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nos Projets & Études de Cas | natural-net Bordeaux</title>
+  <meta name="description" content="Découvrez les projets de notre agence web Natural-net à Bordeaux. Études de cas détaillées en e-commerce BtoC, SEO local, génération de leads et développement sur-mesure.">
+  <meta name="keywords" content="projets web bordeaux, portfolio agence web, references natural-net, etudes de cas seo sea, developpement site internet">
+  <link rel="canonical" href="https://natural-net.fr/projets.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://natural-net.fr/projets.html">
+  <meta property="og:title" content="Nos Réalisations | natural-net">
+  <meta property="og:description" content="Découvrez les performances digitales de nos clients : e-commerce, applications web, SEO, SEA et GEO.">
+  <meta property="og:image" content="https://natural-net.fr/theme/fr/assets/images/logo-sur-fond-blanc.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://natural-net.fr/theme/fr/assets/images/2022/favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Asymmetric App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation (Desktop) -->
+    <aside class="sidebar">
+      <div class="logo-container">
+        <a href="index.html" class="logo-nn">
+          <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+        </a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-item"><a href="index.html">Accueil</a></li>
+          <li class="sidebar-item active"><a href="projets.html">Projets</a></li>
+          <li class="sidebar-item"><a href="services.html">Services</a></li>
+          <li class="sidebar-item"><a href="agence.html">L'Agence</a></li>
+          <li class="sidebar-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <a href="contact.html#rdv" class="nav-btn btn-magnetic">Prendre RDV</a>
+        <div class="sidebar-contact">
+          <span>05 56 17 75 19</span>
+          <a href="mailto:contact@natural-net.fr">contact@natural-net.fr</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Mobile Header (Hidden on Desktop) -->
+    <header class="mobile-header">
+      <a href="index.html" class="logo-nn">
+        <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+      </a>
+      <button class="hamburger" aria-label="Menu de navigation mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-menu-overlay">
+      <ul class="mobile-menu">
+        <li class="mobile-item"><a href="index.html">Accueil</a></li>
+        <li class="mobile-item active"><a href="projets.html">Projets</a></li>
+        <li class="mobile-item"><a href="services.html">Services</a></li>
+        <li class="mobile-item"><a href="agence.html">L'Agence</a></li>
+        <li class="mobile-item"><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html#rdv" class="nav-btn">Prendre RDV</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <main>
+      <div class="glow-bg"></div>
+      
+      <!-- PAGE HEADER -->
+      <section class="page-header reveal">
+        <div class="container">
+          <span style="font-family: var(--font-code); color: var(--success); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1rem;">// Notre Portfolio</span>
+          <h1 class="split-words">Réalisations d'impact</h1>
+          <p class="subtitle">
+            Depuis 2007, nous accompagnons plus de 250 clients dans le développement de leur écosystème web. E-commerce B2C, applications complexes, SEO de haut vol ou stratégie de visibilité globale : explorez nos succès.
+          </p>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO FILTER & GRID -->
+      <section class="section reveal" style="padding-top: 2rem;">
+        <div class="container">
+          
+          <!-- Category Filters -->
+          <div class="portfolio-filters" style="display: flex; gap: 1rem; margin-bottom: 4rem; flex-wrap: wrap;">
+            <button class="filter-btn active" data-filter="all">Tous les projets</button>
+            <button class="filter-btn" data-filter="web">Création & Développement Web</button>
+            <button class="filter-btn" data-filter="marketing">Webmarketing & SEO/SEA</button>
+            <button class="filter-btn" data-filter="amo">Conseil & AMO</button>
+          </div>
+
+          <style>
+            .portfolio-filters button {
+              background-color: transparent;
+              color: var(--text-muted);
+              border: 1px solid var(--border-color);
+              padding: 0.8rem 1.8rem;
+              border-radius: 50px;
+              font-family: var(--font-code);
+              font-size: 0.9rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: var(--transition-smooth);
+            }
+            .portfolio-filters button.active,
+            .portfolio-filters button:hover {
+              background-color: var(--primary);
+              color: var(--text-light);
+              border-color: var(--primary-light);
+              box-shadow: 0 4px 15px rgba(88, 39, 228, 0.3);
+            }
+            
+            .portfolio-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 2.5rem;
+            }
+            
+            .portfolio-item-card {
+              background-color: var(--bg-darker);
+              border: 1px solid var(--border-color);
+              border-radius: 20px;
+              overflow: hidden;
+              transition: var(--transition-bounce);
+              cursor: pointer;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+            .portfolio-item-card:hover {
+              transform: translateY(-8px);
+              border-color: var(--primary-light);
+              box-shadow: 0 15px 30px rgba(88, 39, 228, 0.15);
+            }
+            .portfolio-card-img {
+              height: 240px;
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+            }
+            .portfolio-card-img img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.6s ease;
+            }
+            .portfolio-item-card:hover .portfolio-card-img img {
+              transform: scale(1.05);
+            }
+            .portfolio-card-content {
+              padding: 2rem;
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+            .portfolio-card-tag {
+              font-family: var(--font-code);
+              font-size: 0.75rem;
+              color: var(--success);
+              text-transform: uppercase;
+              font-weight: 600;
+              margin-bottom: 0.8rem;
+              display: block;
+            }
+            .portfolio-card-title {
+              font-size: 1.5rem;
+              margin-bottom: 0.8rem;
+              color: var(--text-light);
+            }
+            .portfolio-card-desc {
+              font-size: 0.95rem;
+              color: var(--text-muted);
+              line-height: 1.5;
+              margin-bottom: 1.5rem;
+            }
+            .portfolio-card-link {
+              font-family: var(--font-code);
+              font-size: 0.85rem;
+              font-weight: 600;
+              color: var(--primary-soft);
+              display: inline-flex;
+              align-items: center;
+              gap: 0.4rem;
+              margin-top: auto;
+            }
+            .portfolio-card-link span {
+              transition: transform 0.3s ease;
+            }
+            .portfolio-item-card:hover .portfolio-card-link span {
+              transform: translateX(5px);
+            }
+            
+            /* Responsive Grid overrides */
+            @media (max-width: 1024px) {
+              .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+            @media (max-width: 768px) {
+              .portfolio-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+          </style>
+
+          <div class="portfolio-grid">
+            
+            <!-- Real Project 1: Saniclean -->
+            <div class="portfolio-item-card" data-category="web marketing" onclick="window.location.href='projet-saniclean.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/18552" alt="Saniclean BtoC e-commerce" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">E-commerce / SEO / SEA</span>
+                  <h3 class="portfolio-card-title">Saniclean</h3>
+                  <p class="portfolio-card-desc">Accompagnement dans la réorientation stratégique vers le BtoC. Création d'un site e-commerce performant, optimisé pour les moteurs de recherche et campagnes publicitaires.</p>
+                </div>
+                <div class="portfolio-card-link">Voir l'étude de cas <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Real Project 2: The Charging Place -->
+            <div class="portfolio-item-card" data-category="web marketing" onclick="window.location.href='projet-thechargingplace.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/18772" alt="The Charging Place" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">B2B / Acquisition</span>
+                  <h3 class="portfolio-card-title">The Charging Place</h3>
+                  <p class="portfolio-card-desc">Génération de prospects ultra-qualifiés et automatisation de l'écosystème web pour des bornes de recharge professionnelles.</p>
+                </div>
+                <div class="portfolio-card-link">Voir l'étude de cas <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Real Project 3: Abriboa -->
+            <div class="portfolio-item-card" data-category="marketing" onclick="window.location.href='projet-abriboa.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/21752" alt="Abriboa SEO Local" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">SEO Local / Visibilité</span>
+                  <h3 class="portfolio-card-title">Abriboa</h3>
+                  <p class="portfolio-card-desc">Mise en place d'un SEO local ultra-performant. Le site internet est devenu le moteur de croissance principal générant 70% à 80% du CA.</p>
+                </div>
+                <div class="portfolio-card-link">Voir l'étude de cas <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Real Project 4: Oareil -->
+            <div class="portfolio-item-card" data-category="web" onclick="window.location.href='projet-oareil.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/23662/oareil-copie.webp" alt="Oareil association" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Plateforme Web / Inscriptions</span>
+                  <h3 class="portfolio-card-title">Oareil</h3>
+                  <p class="portfolio-card-desc">Refonte technique intégrale de la plateforme web de l'association. Modules d'inscriptions aux activités et solutions de paiement en ligne sécurisées.</p>
+                </div>
+                <div class="portfolio-card-link">Voir l'étude de cas <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Other Project 5: Concours SESAME -->
+            <div class="portfolio-item-card" data-category="web marketing" onclick="window.location.href='contact.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/16062/sesame.webp" alt="Concours SESAME" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Portail National / Charge</span>
+                  <h3 class="portfolio-card-title">Concours SESAME</h3>
+                  <p class="portfolio-card-desc">Optimisation des performances de la plateforme et accompagnement webmarketing stratégique pour ce concours d'accès à 17 grandes écoles.</p>
+                </div>
+                <div class="portfolio-card-link">Nous contacter sur ce type de projet <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Other Project 6: Lokizi -->
+            <div class="portfolio-item-card" data-category="web marketing" onclick="window.location.href='contact.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/18342/lokizi.webp" alt="Lokizi Immobilier" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Plateforme Métier / SEO</span>
+                  <h3 class="portfolio-card-title">Lokizi</h3>
+                  <p class="portfolio-card-desc">Création de la plateforme web de l'agence immobilière de gestion locative meublée Lokizi. Stratégie de visibilité sur les moteurs de recherche.</p>
+                </div>
+                <div class="portfolio-card-link">Nous contacter sur ce type de projet <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Other Project 7: Mairie du Haillan -->
+            <div class="portfolio-item-card" data-category="amo" onclick="window.location.href='contact.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/23362/amo-site-web-le-haillan.webp" alt="AMO Le Haillan" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Assistance Maîtrise d'Ouvrage</span>
+                  <h3 class="portfolio-card-title">Ville du Haillan</h3>
+                  <p class="portfolio-card-desc">Assistance à Maîtrise d'Ouvrage (AMO) pour la refonte complète du site internet institutionnel de la commune du Haillan en Gironde.</p>
+                </div>
+                <div class="portfolio-card-link">Nous contacter sur ce type de projet <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Other Project 8: Clodéco -->
+            <div class="portfolio-item-card" data-category="web marketing" onclick="window.location.href='contact.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/17142/clodeco.webp" alt="Clodéco clôtures" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Catalogue / Génération Leads</span>
+                  <h3 class="portfolio-card-title">Clodéco</h3>
+                  <p class="portfolio-card-desc">Accompagnement web et webmarketing pour le leader de la pose de clôtures. Stratégie SEO, campagnes SEA Google Ads et outils de devis en ligne.</p>
+                </div>
+                <div class="portfolio-card-link">Nous contacter sur ce type de projet <span>&rarr;</span></div>
+              </div>
+            </div>
+
+            <!-- Other Project 9: Ivazio Island -->
+            <div class="portfolio-item-card" data-category="web" onclick="window.location.href='contact.html'">
+              <div class="portfolio-card-img">
+                <img src="https://natural-net.fr/media/vignette/26592/crazy-week-card.webp" alt="Ivazio Island Loisirs" loading="lazy">
+              </div>
+              <div class="portfolio-card-content">
+                <div>
+                  <span class="portfolio-card-tag">Site Vitrine / Réservations</span>
+                  <h3 class="portfolio-card-title">Ivazio Island</h3>
+                  <p class="portfolio-card-desc">Réalisation du site internet et mise en place d'un système de réservation de loisirs et évènements en ligne pour le complexe de loisirs bordelais.</p>
+                </div>
+                <div class="portfolio-card-link">Nous contacter sur ce type de projet <span>&rarr;</span></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-info">
+              <a href="index.html" class="logo-nn">
+                <span class="l-n">n</span>atural<span class="l-dot">.</span><span class="l-net">net</span>
+              </a>
+              <p style="margin-top: 1.5rem; font-size: 0.95rem;">
+                Notre agence web conçoit des architectures digitales et des stratégies webmarketing (SEO, SEA, GEO) à fort impact depuis 2007 au cœur de Bordeaux.
+              </p>
+              <div class="certification-logos" style="display: flex; gap: 1.5rem; align-items: center; margin-top: 2rem;">
+                <img src="https://natural-net.fr/theme/fr/assets/images/2025/logo-activateur-francenum-web.jpg" alt="Activateur France Num" style="height: 45px; border-radius: 6px;" loading="lazy">
+                <img src="https://natural-net.fr/theme/fr/assets/images/2026/logo-LQN-horizontal.svg" alt="Label Qualité Numérique" style="height: 35px;" loading="lazy">
+              </div>
+            </div>
+
+            <div class="footer-links">
+              <h4>Navigation</h4>
+              <ul class="footer-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="services.html">Services & Expertise</a></li>
+                <li><a href="agence.html">L'Agence</a></li>
+                <li><a href="contact.html">Contact & RDV</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-contact">
+              <h4>Contact</h4>
+              <div class="footer-contact-details">
+                <div class="footer-contact-item">Adresse : <span>14 rue Marceau, 33000 Bordeaux</span></div>
+                <div class="footer-contact-item">Téléphone : <a href="tel:0556177519"><span>05 56 17 75 19</span></a></div>
+                <div class="footer-contact-item">Email : <a href="mailto:contact@natural-net.fr"><span>contact@natural-net.fr</span></a></div>
+                <div class="footer-contact-item">Horaires : <span>10h - 18h du lundi au vendredi</span></div>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-icon" aria-label="LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                </a>
+                <a href="#" class="social-icon" aria-label="X">
+                  <svg width="18" height="18" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <div class="footer-bottom-links">
+              <a href="https://natural-net.fr/donnees-personnelles.htm&#108;">Données Personnelles</a>
+              <a href="https://natural-net.fr/mentions-legales.htm&#108;">Mentions Légales</a>
+              <a href="https://natural-net.fr/cgv.htm&#108;">CGV</a>
+            </div>
+            <div class="footer-copyright">
+              <span>&copy; 2026 natural-net. Tous droits réservés. Site garanti 100% sans cookies.</span>
+            </div>
+            <div class="footer-love">
+              Site redesigné avec attention ♥ par Tristan
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  
+  <!-- Interactive Category Filtering -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const portfolioCards = document.querySelectorAll('.portfolio-item-card');
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Toggle active class on buttons
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filterValue = btn.getAttribute('data-filter');
+
+          portfolioCards.forEach(card => {
+            const categories = card.getAttribute('data-category');
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+              card.style.display = 'flex';
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+              }, 50);
+            } else {
+              card.style.opacity = '0';
+              card.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                card.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
